@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6kt-BF-eTD">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Leçons-->
+        <scene sceneID="Lvv-uZ-fOo">
+            <objects>
+                <navigationController id="6kt-BF-eTD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Leçons" image="book.circle.fill" catalog="system" id="kpo-No-GgQ"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cVa-GD-1RX">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Ibj-ll-nlT" kind="relationship" relationship="rootViewController" id="Q8v-el-JFV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nRR-lV-fnu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1454" y="165"/>
+        </scene>
+        <!--Leçons-->
+        <scene sceneID="UgJ-rV-bVf">
+            <objects>
+                <viewController id="Ibj-ll-nlT" customClass="LessonsMenuViewController" customModule="Learn_English" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PRh-nK-R4x">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="crn-dw-gQy">
+                                <rect key="frame" x="40" y="219" width="334" height="529"/>
+                                <color key="backgroundColor" red="0.99498695140000004" green="0.95645147559999999" blue="0.90899670119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7SP-LM-Tea">
+                                    <size key="itemSize" width="140" height="140"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LessonMenuCell" id="82g-eQ-Tzp">
+                                        <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="peR-lk-piS">
+                                            <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Ibj-ll-nlT" id="pq9-de-8sh"/>
+                                    <outlet property="delegate" destination="Ibj-ll-nlT" id="lyo-Kb-Hgb"/>
+                                </connections>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choisis ton thème" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5P7-aO-5j3">
+                                <rect key="frame" x="138" y="103" width="138" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99498695140000004" green="0.95645147559999999" blue="0.90899670119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8tt-KS-QmF" firstAttribute="bottom" secondItem="crn-dw-gQy" secondAttribute="bottom" constant="65" id="5Tk-EJ-cko"/>
+                            <constraint firstItem="crn-dw-gQy" firstAttribute="top" secondItem="5P7-aO-5j3" secondAttribute="bottom" constant="95" id="JZu-3Q-7UK"/>
+                            <constraint firstItem="8tt-KS-QmF" firstAttribute="trailing" secondItem="5P7-aO-5j3" secondAttribute="trailing" constant="138" id="Q86-7H-Im7"/>
+                            <constraint firstItem="crn-dw-gQy" firstAttribute="leading" secondItem="8tt-KS-QmF" secondAttribute="leading" constant="40" id="Vfj-Q8-FZU"/>
+                            <constraint firstItem="5P7-aO-5j3" firstAttribute="top" secondItem="8tt-KS-QmF" secondAttribute="top" constant="15" id="ilI-fj-zTi"/>
+                            <constraint firstItem="5P7-aO-5j3" firstAttribute="leading" secondItem="8tt-KS-QmF" secondAttribute="leading" constant="138" id="tqW-cQ-Faa"/>
+                            <constraint firstItem="8tt-KS-QmF" firstAttribute="trailing" secondItem="crn-dw-gQy" secondAttribute="trailing" constant="40" id="xcB-si-nnM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8tt-KS-QmF"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Leçons" id="PyZ-Of-q5o"/>
+                    <connections>
+                        <outlet property="collectionView" destination="crn-dw-gQy" id="vff-lf-Gjb"/>
+                        <segue destination="cwi-HC-ofk" kind="show" identifier="segueToQuizzLesson" id="4rS-PS-yxO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rhz-Bl-LwM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-410.14492753623193" y="164.73214285714286"/>
+        </scene>
+        <!--Quizz-->
+        <scene sceneID="bCL-fU-3kx">
+            <objects>
+                <viewController id="cwi-HC-ofk" customClass="QuizzLessonViewController" customModule="Learn_English" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5qj-iF-8Cv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="u5m-ci-1ye">
+                                <rect key="frame" x="47" y="233" width="320" height="443"/>
+                                <color key="backgroundColor" red="0.99498695140000004" green="0.95645147559999999" blue="0.90899670119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="AdO-hT-9Bs">
+                                    <size key="itemSize" width="150" height="150"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="QuestionViewCell" id="8uc-db-Gz8">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="3nu-Fn-HMp">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="cwi-HC-ofk" id="zmg-rN-McB"/>
+                                    <outlet property="delegate" destination="cwi-HC-ofk" id="Ws2-6u-kiQ"/>
+                                </connections>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ou est..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOh-R5-bzj">
+                                <rect key="frame" x="41" y="116" width="332" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gki-DS-6qr">
+                                <rect key="frame" x="158" y="749" width="99" height="30"/>
+                                <state key="normal" title="Recommencer">
+                                    <color key="titleColor" red="0.41041657329999998" green="0.71237295869999995" blue="0.72134381530000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="restartQuizz" destination="cwi-HC-ofk" eventType="touchUpInside" id="jre-fM-nPM"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="IQx-7N-L7p">
+                                <rect key="frame" x="27" y="169" width="360" height="2"/>
+                                <color key="tintColor" red="0.41041657329999998" green="0.71237295869999995" blue="0.72134381530000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ukq-X0-tuN">
+                                <rect key="frame" x="107" y="694" width="201" height="30"/>
+                                <state key="normal" title="Passer au niveau 2">
+                                    <color key="titleColor" red="0.41041657329999998" green="0.71237295869999995" blue="0.72134381530000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToNextLevel" destination="cwi-HC-ofk" eventType="touchUpInside" id="b7p-K7-CDD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99498695140000004" green="0.95645147559999999" blue="0.90899670119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="TOh-R5-bzj" firstAttribute="top" secondItem="chK-xK-Bco" secondAttribute="top" constant="28" id="638-Ib-2An"/>
+                            <constraint firstItem="u5m-ci-1ye" firstAttribute="top" secondItem="IQx-7N-L7p" secondAttribute="bottom" constant="62" id="9Pn-Dg-MCG"/>
+                            <constraint firstItem="IQx-7N-L7p" firstAttribute="top" secondItem="TOh-R5-bzj" secondAttribute="bottom" constant="32" id="APE-ge-VMN"/>
+                            <constraint firstItem="Gki-DS-6qr" firstAttribute="top" secondItem="Ukq-X0-tuN" secondAttribute="bottom" constant="25" id="BQJ-RW-y8T"/>
+                            <constraint firstItem="Ukq-X0-tuN" firstAttribute="top" secondItem="u5m-ci-1ye" secondAttribute="bottom" constant="18" id="FyD-VY-AHd"/>
+                            <constraint firstItem="IQx-7N-L7p" firstAttribute="leading" secondItem="5qj-iF-8Cv" secondAttribute="leading" constant="27" id="L6Q-Ny-HLa"/>
+                            <constraint firstItem="chK-xK-Bco" firstAttribute="trailing" secondItem="TOh-R5-bzj" secondAttribute="trailing" constant="41" id="LJV-B3-cFy"/>
+                            <constraint firstAttribute="trailing" secondItem="IQx-7N-L7p" secondAttribute="trailing" constant="27" id="LOP-Yk-c10"/>
+                            <constraint firstItem="Ukq-X0-tuN" firstAttribute="leading" secondItem="chK-xK-Bco" secondAttribute="leading" constant="107" id="MxX-uc-MI9"/>
+                            <constraint firstItem="chK-xK-Bco" firstAttribute="trailing" secondItem="Gki-DS-6qr" secondAttribute="trailing" constant="157" id="TfS-l9-ds2"/>
+                            <constraint firstItem="chK-xK-Bco" firstAttribute="trailing" secondItem="u5m-ci-1ye" secondAttribute="trailing" constant="47" id="WnZ-oD-dcc"/>
+                            <constraint firstItem="TOh-R5-bzj" firstAttribute="leading" secondItem="chK-xK-Bco" secondAttribute="leading" constant="41" id="Wng-HC-6vG"/>
+                            <constraint firstItem="chK-xK-Bco" firstAttribute="bottom" secondItem="Gki-DS-6qr" secondAttribute="bottom" constant="34" id="eWz-S2-Ma7"/>
+                            <constraint firstItem="chK-xK-Bco" firstAttribute="trailing" secondItem="Ukq-X0-tuN" secondAttribute="trailing" constant="106" id="kdI-uO-gls"/>
+                            <constraint firstItem="Gki-DS-6qr" firstAttribute="leading" secondItem="chK-xK-Bco" secondAttribute="leading" constant="158" id="pUQ-jg-rU5"/>
+                            <constraint firstItem="u5m-ci-1ye" firstAttribute="leading" secondItem="chK-xK-Bco" secondAttribute="leading" constant="47" id="xww-yb-fxU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="chK-xK-Bco"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Quizz" id="xo8-9c-Rh1"/>
+                    <connections>
+                        <outlet property="collectionView" destination="u5m-ci-1ye" id="26o-zo-GPU"/>
+                        <outlet property="goToNextLevelButton" destination="Ukq-X0-tuN" id="3SR-g8-Xna"/>
+                        <outlet property="progressView" destination="IQx-7N-L7p" id="KV4-G3-2f5"/>
+                        <outlet property="questionLabel" destination="TOh-R5-bzj" id="tCL-U7-1fn"/>
+                        <outlet property="restartButton" destination="Gki-DS-6qr" id="CEZ-ci-LMJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6yu-pj-wTr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="569.56521739130437" y="164.73214285714286"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="book.circle.fill" catalog="system" width="64" height="60"/>
+    </resources>
+</document>
